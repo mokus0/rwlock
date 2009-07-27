@@ -18,4 +18,4 @@ description:            A simple implementation of a multiple-reader / single-wr
 Library
   hs-source-dirs:       src
   exposed-modules:      Control.Concurrent.RWLock
-  build-depends:        base >= 3, monad-loops, stm
+  build-depends:        base >= 3 && <5, monad-loops, stm
