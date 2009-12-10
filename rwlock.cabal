@@ -15,7 +15,13 @@ synopsis:               Multiple-read / single-write locks
 description:            A simple implementation of a multiple-reader / single-writer
                         lock, using STM.
 
+flag base4
+
 Library
   hs-source-dirs:       src
   exposed-modules:      Control.Concurrent.RWLock
-  build-depends:        base >= 3 && <5, monad-loops, stm
+  build-depends:        monad-loops, stm
+  if flag(base4)
+    build-depends:      base >= 4 && <5, syb
+  else
+    build-depends:      base >= 3 && <4
