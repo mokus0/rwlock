@@ -24,7 +24,7 @@ module Control.Concurrent.RWLock
     ) where
 
 import Control.Concurrent.STM
-import Control.Monad.Loops
+import Control.Monad.Loops.STM
 import Control.Exception
 
 import Data.Generics (Data, Typeable)
